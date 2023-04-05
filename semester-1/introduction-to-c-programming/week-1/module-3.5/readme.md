@@ -9,8 +9,8 @@
     6.Loop
 
 ### Practice Problem:
-1. [I Love Practice]()
-2. [Sum of Two Numbers]()
-3. [N Times]()
-4. [Variables]()
-5. [Divisible By 5 or Not]()
+1. [I Love Practice](https://github.com/imsay3m/cs-fundamentals-with-phitron-2023/blob/main/semester-1/introduction-to-c-programming/week-1/module-3.5/i-love-practice.c)
+2. [Sum of Two Numbers](https://github.com/imsay3m/cs-fundamentals-with-phitron-2023/blob/main/semester-1/introduction-to-c-programming/week-1/module-3.5/sum-of-two-numbers.c)
+3. [N Times](https://github.com/imsay3m/cs-fundamentals-with-phitron-2023/blob/main/semester-1/introduction-to-c-programming/week-1/module-3.5/n-times.c)
+4. [Variables](https://github.com/imsay3m/cs-fundamentals-with-phitron-2023/blob/main/semester-1/introduction-to-c-programming/week-1/module-3.5/variables.c)
+5. [Divisible By 5 or Not](https://github.com/imsay3m/cs-fundamentals-with-phitron-2023/blob/main/semester-1/introduction-to-c-programming/week-1/module-3.5/divisible-by-5-or-not.c)
