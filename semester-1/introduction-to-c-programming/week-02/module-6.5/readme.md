@@ -1,4 +1,4 @@
-# Module 6.5: Week 01 Practice Day 01
+# Module 6.5: Week 02 Practice Day 01
 ## Topics:
 1. If Else Ladder
 2. Nested If Else
