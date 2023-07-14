@@ -13,7 +13,7 @@ public:
         this->prev = NULL;
     }
 };
-void printList(Node *head)
+void printList(Node *head) // O(N)
 {
     Node *tmp = head;
     while (tmp != NULL)
@@ -23,7 +23,7 @@ void printList(Node *head)
     }
     cout << endl;
 }
-void printReverse(Node *tail)
+void printReverse(Node *tail) // O(N)
 {
     Node *tmp = tail;
     while (tmp != NULL)
@@ -33,7 +33,7 @@ void printReverse(Node *tail)
     }
     cout << endl;
 }
-int size(Node *head)
+int size(Node *head) // O(N)
 {
     Node *tmp = head;
     int cnt = 0;
@@ -44,7 +44,36 @@ int size(Node *head)
     }
     return cnt;
 }
-void insertAtPos(Node *&head, Node *&tail, int pos, int val)
+void insertHead(Node *&head, Node *&tail, int val) // O(1)
+{
+    Node *newNode = new Node(val);
+    if (head == NULL)
+    {
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+
+    Node *tmp = head;
+    newNode->next = tmp;
+    tmp->prev = newNode;
+    head = newNode;
+}
+void insertTail(Node *&head, Node *&tail, int val) // O(1)
+{
+
+    Node *newNode = new Node(val);
+    if (tail == NULL)
+    {
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+    tail->next = newNode;
+    newNode->prev = tail;
+    tail = newNode;
+}
+void insertAtPos(Node *&head, Node *&tail, int pos, int val) // O(N)
 {
     Node *newNode = new Node(val);
     Node *tmp = head;
@@ -60,6 +89,8 @@ void insertAtPos(Node *&head, Node *&tail, int pos, int val)
 }
 int main()
 {
+    /* Node *head = NULL;
+    Node *tail = NULL; */
     Node *head = new Node(10);
     Node *a = new Node(20);
     Node *b = new Node(30);
@@ -77,9 +108,19 @@ int main()
     printReverse(tail);
     int pos, val;
     cin >> pos >> val;
-    if (pos >= size(head))
+    if (pos > size(head))
     {
         cout << "Invalid Position" << endl;
+        return 0;
+    }
+    else if (pos == size(head))
+    {
+        insertTail(head, tail, val);
+    }
+
+    else if (pos == 0)
+    {
+        insertHead(head, tail, val);
     }
     else
     {
