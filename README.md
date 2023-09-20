@@ -15,3 +15,7 @@
 - Semester 2-> Algo-> Week 3-> Module 11.5 practice problem
 - Semester 2-> Algo-> Week 5-> Module 17.5 practice problem
 - Semester 2-> Algo-> Week 5-> Module 19.5 practice problem
+- Semester 2-> Algo-> Week 6-> Module 22.5 practice problem
+- Semester 2-> Algo-> Week 6-> Module 23.5 practice problem
+- Semester 2-> Algo-> Week 7-> Module 26.5 practice problem
+- Semester 2-> Algo-> Week 7-> Module 27.5 practice problem
