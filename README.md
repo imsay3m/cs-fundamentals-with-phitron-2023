@@ -7,6 +7,8 @@
 - Semester 2-> DS-> Week 6-> Module 22.5 practice problem
 - Semester 2-> DS-> Week 6-> Module 23.5 practice problem
 - Semester 2-> DS-> Data Structure related practice question(materials)
+
+
 - Semester 2-> Algo-> Week 1-> Module 2.5 practice problem
 - Semester 2-> Algo-> Week 1-> Module 3.5 practice problem
 - Semester 2-> Algo-> Week 2-> Module 6.5 practice problem
@@ -19,3 +21,9 @@
 - Semester 2-> Algo-> Week 6-> Module 23.5 practice problem
 - Semester 2-> Algo-> Week 7-> Module 26.5 practice problem
 - Semester 2-> Algo-> Week 7-> Module 27.5 practice problem
+
+
+- Semester 3-> OOP-> Week 1-> Module 2.5 practice problem
+- Semester 3-> OOP-> Week 1-> Module 3.5 practice problem
+- Semester 3-> OOP-> Week 1-> Module 6.5 practice problem
+- Semester 3-> OOP-> Week 1-> Module 7.5 practice problem
