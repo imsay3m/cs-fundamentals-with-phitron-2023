@@ -1,0 +1,20 @@
+-- Function
+SELECT UPPER('abc');
+
+SELECT *
+FROM employees;
+
+SELECT UPPER(first_name), first_name
+FROM employees;
+
+SELECT COS(0);
+SELECT ACOS(1);
+SELECT COS(90);
+
+SELECT RADIANS(90);
+
+SELECT PI();
+
+SELECT ROUND(12.567,2);
+
+SELECT RAND();
