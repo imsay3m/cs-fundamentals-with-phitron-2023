@@ -1,0 +1,9 @@
+- Go to the target dirctory
+- Check `pip list`
+- create a virtual environment name venv `virtualenv venv`
+- then again check `pip list`
+- activate virtual environment `source venv/Scripts/activate`
+- then again check `pip list`
+- install mysql connector `pip install mysql-connector-python`
+- import mysql in python code `import mysql.connector`
+- execute python code
