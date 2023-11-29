@@ -1,0 +1,79 @@
+body {
+    background-color: teal;
+    margin: 0 auto;
+}
+
+.amount-container {
+    margin: 20px auto;
+    padding: 20px 10px;
+    text-align: center;
+    width: 720px;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    background-color: rgb(158, 126, 87);
+}
+
+.amount-container .deposite {
+    border-radius: 7px;
+    background-color: rgb(50, 153, 95);
+    color: white;
+    width: 200px;
+}
+
+.amount-container .withdraw {
+    border-radius: 7px;
+    background-color: rgb(216, 55, 133);
+    color: white;
+    width: 200px;
+}
+
+.amount-container .total {
+    border-radius: 7px;
+    background-color: rgb(173, 171, 49);
+    color: white;
+    width: 200px;
+}
+
+.deposite-withdraw-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+}
+
+.deposite-withdraw-container .input-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 250px;
+    border-radius: 6px;
+    background-color: rgba(201, 200, 222, 0.144);
+    row-gap: 5px;
+}
+
+.deposite-withdraw-container .input-box input {
+    color: white;
+    background-color: rgb(92, 76, 76);
+    padding: 30px 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+}
+
+.deposite-withdraw-container .input-box .btn {
+    color: aliceblue;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.deposite-withdraw-container .deposite-box .deposite-btn {
+    background-color: rgb(116, 174, 58);
+}
+
+.deposite-withdraw-container .withdraw-box .withdraw-btn {
+    background-color: rgb(174, 75, 58);
+}
