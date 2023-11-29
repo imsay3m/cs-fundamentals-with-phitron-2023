@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts start -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- google fonts end -->
+    <!-- stylesheet start -->
+    <link rel="stylesheet" href="style.css">
+    <!-- stylesheet end -->
+    <title>PH Tube-Blog</title>
+</head>
+
+<body class="font-sans">
+    <!-- navbar start -->
+    <nav class="mx-auto my-0 mt-12 w-80 lg:w-[1320px] flex flex-row justify-between items-center">
+        <div>
+            <a href="index.html">
+                <button class="flex flex-wrap justify-start items-center"><img src="assets/navbar/logo.png" alt="">
+                    <h3 class="ml-3 text-primary text-[32px] font-bold">PH <span
+                            class="text-[#252525] inline">Tube</span>
+                    </h3>
+                </button>
+            </a>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <hr class="mx-auto my-8 w-80 lg:w-[1320px] border-t-2 border-[#17171733]">
+
+    <!-- Q&A start -->
+    <div class="max-w-lg mx-auto p-8 flex flex-col gap-y-5">
+        <!-- Q1&A1 start -->
+        <details class="open:bg-secondery  open:ring-1 open:ring-seconderylite open:shadow-lg p-6  rounded-lg" open>
+            <summary class="text-sm lg:text-base leading-6 text-primary font-semibold select-none">
+                Discuss the scope of <code class="bg-seconderylite rounded py-0.5 px-1">var</code>, <code
+                    class="bg-seconderylite rounded  py-0.5 px-1">let</code>, and
+                <code class="bg-seconderylite rounded py-0.5 px-1">const</code>
+            </summary>
+            <div class="mt-3 text-sm lg:text-base leading-6 text-black">
+                <div class="border p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-2">var:</h2>
+                    <ul class="list-disc list-inside">
+                        <li>Function-scoped or globally scoped.</li>
+                        <li>Hoisted to the top of their scope.</li>
+                        <li>Can be re-declared and updated.</li>
+                        <li>Not block-scoped; can be accessed outside of block statements.</li>
+                    </ul>
+
+                </div>
+
+                <div class="border p-4 rounded-lg shadow-md my-4">
+                    <h2 class="text-xl font-semibold mb-2">let:</h2>
+                    <ul class="list-disc list-inside">
+                        <li>Block-scoped (limited to the block {} where it's defined).</li>
+                        <li>Hoisted to the top of their block scope but not initialized until the declaration is
+                            evaluated.
+                        </li>
+                        <li>Cannot be re-declared in the same scope.</li>
+                        <li>Supports reassignment; the value can be updated after declaration.</li>
+                    </ul>
+
+                </div>
+
+                <div class="border p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-2">const:</h2>
+                    <ul class="list-disc list-inside">
+                        <li>Block-scoped (limited to the block {} where it's defined).</li>
+                        <li>Must be initialized with a value upon declaration and cannot be reassigned to a different
+                            value.
+                        </li>
+                        <li>For objects and arrays, properties or elements can be modified, but the variable reference
+                            cannot
+                            be reassigned.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </details>
+        <!-- Q1&A1 end -->
+        <!-- Q2&A2 start -->
+        <details class="open:bg-secondery  open:ring-1 open:ring-seconderylite open:shadow-lg p-6  rounded-lg" close>
+            <summary class="text-sm lg:text-base leading-6 text-primary font-semibold select-none">
+                Tell us the use cases of <code class="bg-seconderylite rounded py-0.5 px-1">null</code> and <code
+                    class="bg-seconderylite rounded py-0.5 px-1">undefined</code>
+            </summary>
+            <div class="mt-3 text-sm lg:text-base leading-6 text-black">
+                <div class="border p-4 rounded-lg shadow-md mb-4">
+                    <h2 class="text-xl font-semibold mb-2">Undefined:</h2>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Default absence:</strong> Used when a variable has been declared but not assigned
+                            any value.</li>
+                        <li><strong>Function returns:</strong> Returned implicitly by functions that do not explicitly
+                            return a value.
+                        </li>
+                        <li><strong>Property absence:</strong> When trying to access a non-existent property in an
+                            object.</li>
+                        <li><strong>Variable not found:</strong> Accessing a variable that doesn't exist.</li>
+                    </ul>
+                </div>
+
+                <div class="border p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-2">Null:</h2>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Intentional absence:</strong> Represents the intentional absence of any object
+                            value.</li>
+                        <li><strong>Clearing/resetting:</strong> Used to explicitly reset a value or indicate no current
+                            object
+                            reference.</li>
+                        <li><strong>Signifying absence:</strong> Often used to show that a variable has no meaningful
+                            value or object
+                            assigned to it.</li>
+                    </ul>
+                </div>
+            </div>
+        </details>
+        <!-- Q2&A2 end -->
+        <!-- Q3&A3 start -->
+        <details class="open:bg-secondery  open:ring-1 open:ring-seconderylite open:shadow-lg p-6  rounded-lg" close>
+            <summary class="text-sm lg:text-base leading-6 text-primary font-semibold select-none">
+                What do you mean by REST API?
+            </summary>
+            <div class="mt-3 text-sm lg:text-base leading-6 text-black">
+                <div class="border p-4 rounded-lg shadow-md">
+                    <p>
+                        REST (Representational State Transfer) is an architectural style for creating networked
+                        applications. RESTful APIs,
+                        following REST principles, focus on:
+                    </p>
+
+                    <ul class="list-disc list-inside my-4">
+                        <li><strong>Statelessness:</strong> Requests must contain all necessary information, and the
+                            server doesn't store
+                            client context between requests.</li>
+                        <li><strong>Resource-Based:</strong> Resources, identified by URIs, are the core of the API.
+                            Examples include users,
+                            posts, etc.</li>
+                        <li><strong>Uniform Interface:</strong> Uses standard HTTP methods (GET, POST, PUT, DELETE) to
+                            manipulate resources.
+                        </li>
+                        <li><strong>Representation:</strong> Resources are represented in formats like JSON or XML for
+                            client-server
+                            interaction.</li>
+                        <li><strong>Stateless Communication:</strong> Clients and servers interact in a stateless
+                            manner.</li>
+                    </ul>
+
+                    <p>
+                        RESTful APIs are popular due to their simplicity, scalability, and compatibility with the web.
+                        They facilitate
+                        effective communication between different systems over the internet by following interoperable
+                        principles.
+                    </p>
+                </div>
+            </div>
+        </details>
+        <!-- Q3&A3 end -->
+    </div>
+    <!-- Q&A end -->
+</body>
+
+</html>
