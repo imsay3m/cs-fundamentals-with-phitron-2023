@@ -47,4 +47,3 @@
 - Semester 3-> SDP-> Week 1-> Module 3.5 practice problem
 - Semester 3-> SDP-> Week 2-> Module 5.5 practice problem
 - Semester 3-> SDP-> Week 2-> Module 7.5 practice problem
-- Semester 3-> SDP-> Week 3-> Module 10.5 practice problem
