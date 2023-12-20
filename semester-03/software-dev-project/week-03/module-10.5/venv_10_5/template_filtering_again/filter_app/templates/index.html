@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Filtering App</title>
+  </head>
+  <body>
+    <h1>Template Filter</h1>
+    <p>{{'ABCDEF' | make_list}}</p>
+    <p>You have {{ num_messages1 }} message{{ num_messages1 | pluralize }}.</p>
+    <p>You have {{ num_messages2 }} message{{ num_messages2 | pluralize }}.</p>
+    <p>{{"<b>This</b> is <em>a</em> <button>Button</button>" | striptags}}</p>
+    <p>{{"You can build web apps with python and Django" | truncatewords:5}}</p>
+    <p>{{'You can build web apps with python and Django' | wordcount}}</p>
+    <p>{{"Microsoft unveils new Bing with ChatGPT powers" | upper}}</p>
+    <p>{{'Cloud computing' |truncatechars:6}}</p>
+    <p>{{your_datetime | timesince}}</p>
+    <p>{{ time_now | time:"H:i" }}</p>
+    <p>{{some_list | slice:":2"}}</p>
+    <p>{{ some_list | random }}</p>
+    <p>{{'Its a new day' | title}}</p>
+    <p>{{'My Name is Jai'|lower}}</p>
+    <p>{{'My Name is Jai'|upper}}</p>
+    <p>{{some_list |length}}</p>
+    <p>{{ some_list | first }}</p>
+    <p>{{ some_list | last }}</p>
+    <p>{{ some_list | first }}</p>
+    <p>{{ person | dictsort:'age' }}</p>
+    <p>{{"January - February - March" | cut:"-"}}</p>
+    <p>{{some_list|join:" - "}}</p>
+    <p>{{20 | add:"5"}}</p>
+    <p>{{'django' | capfirst}}</p>
+  </body>
+</html>
