@@ -1,0 +1,26 @@
+* {
+    font-family: Josefin Sans;
+}
+
+.card-title {
+    font-family: Cormorant Infant;
+    color: #292E36;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 77.1%;
+}
+
+.card-text {
+    color: #555;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 126.5%;
+}
+
+.btn {
+    padding: 20px 68px;
+    justify-content: center;
+    align-items: center;
+}

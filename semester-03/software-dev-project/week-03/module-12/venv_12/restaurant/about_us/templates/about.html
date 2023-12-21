@@ -1,3 +1,22 @@
-{% extends "base.html" %} {% block content %}
-<h1>About</h1>
-{% endblock content %}
+{% extends 'base.html' %} {% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock %}
+{% block content %}
+  <div class="container">
+    {% load static %}
+    <h2 class="text-center my-1">About Us App</h2>
+    <div class="row justify-content-md-center align-items-center">
+      <div class="col-sm-6">
+        <div class="">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Quality and Tradition</h5>
+            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, illum soluta, similique eum alias repellat animi et sit quis enim aut minima veritatis perspiciatis! Consectetur dolore nisi ullam deleniti harum.</p>
+            <a href="{% url 'index' %}" class="btn border">Go Home</a>
+          </div>
+        </div>
+      </div>
+      <img class="col-sm-6" src="{% static 'images/about_banner_right.png' %}" alt="aboutImage" />
+    </div>
+  </div>
+{% endblock %}

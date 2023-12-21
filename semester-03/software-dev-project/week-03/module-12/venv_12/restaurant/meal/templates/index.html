@@ -1,3 +1,23 @@
-{% extends "base.html" %} {% block content %}
-<h1>Meal App</h1>
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock css %}
+{% block content %}
+<div class="container">
+  <h2 class="text-center my-1">Meal App</h2>
+  <div class="row justify-content-md-center align-items-center">
+    <div class="col-sm-7">
+      <div class="">
+        <div class="card-body">
+          <h4 class="card-title mb-3">Heal the world with coffee</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Varius sed pharetra dictum neque massa congue</p>
+          <a href="{% url 'items' %}" class="btn border btn-home">See Items</a>
+        </div>
+      </div>
+    </div>
+    <img class="col-sm-5" src="{% static 'images/home_banner_right.png' %}" alt="bannerImage" />
+  </div>
+</div>
 {% endblock content %}

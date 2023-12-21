@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <h2 class="text-center my-1">Items Page</h2>
+  <div class="items row gap-4 justify-content-center my-4">
+    {% for i in categories %}
+      <div class="card col-3" style="width: 15rem;">
+        <img src="{{i.strCategoryThumb}}" class="card-img-top img-fluid my-2" alt="itemsImage">
+        <div class="card-body">
+          <h5 class="card-title">{{i.strCategory}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">ID:{{i.idCategory}}</h6>
+          <p class="card-text">{{i.strCategoryDescription|truncatewords:10}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
