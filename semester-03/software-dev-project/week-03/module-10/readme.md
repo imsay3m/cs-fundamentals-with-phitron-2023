@@ -29,7 +29,7 @@
     - <code>python manage.py runserver</code>
 
 8. create an app
-    - django-admin startapp appName
+    - <code>django-admin startapp appName</code>
 
 9. for import problem
     - Type <code>pip show Django</code> in terminal

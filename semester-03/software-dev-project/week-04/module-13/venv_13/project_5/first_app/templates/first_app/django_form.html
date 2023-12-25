@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  {% load crispy_forms_tags %}
+  <div class="container my-5 mx-auto w-50">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <hr />
+    <div>
+      <h4>Name: {{ data.name }}</h4>
+      <h4>Email: {{ data.email }}</h4>
+      <h4>Password: {{ data.password }}</h4>
+      <h4>Confirm Password: {{ data.confirmPassword }}</h4>
+      <h4>Age: {{ data.age }}</h4>
+      <h4>Weight: {{ data.weight }}</h4>
+      <h4>Balance: {{ data.balance }}</h4>
+      <h4>Date Of Birth: {{ data.birthDate }}</h4>
+      <h4>Appoinment: {{ data.appoinment }}</h4>
+      <h4>Size: {{ data.size }}</h4>
+      <h4>Pizza: {{ data.pizza }}</h4>
+      <h4>File: {{ data.file }}</h4>
+    </div>
+  </div>
+{% endblock %}
