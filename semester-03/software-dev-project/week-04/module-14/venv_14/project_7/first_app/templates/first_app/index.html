@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>This Is First app Home page</h1>
+  {% load crispy_forms_tags %}
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <input class="btn btn-primary my-2" type="submit" value="Submit" />
+    </form>
+  </div>
+  <div>
+    {% if data %}
+      <h3 class="text-danger">Data Is Succesfully Submitted</h3>
+      <h5>Name:{{ data.name }}</h5>
+      <h5>Father Name:{{ data.father_name }}</h5>
+      <h5>Address:{{ data.address }}</h5>
+    {% else %}
+      <h3>Data is not Submitted!</h3>
+    {% endif %}
+  </div>
+{% endblock %}
