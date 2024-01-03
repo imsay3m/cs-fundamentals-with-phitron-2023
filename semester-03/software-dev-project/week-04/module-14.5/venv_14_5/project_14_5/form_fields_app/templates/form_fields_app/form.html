@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <h3 class="my-2">Contact Us</h3>
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <input class="my-3 btn btn-primary" type="submit" value="Submit" />
+    </form>
+  </div>
+{% endblock %}

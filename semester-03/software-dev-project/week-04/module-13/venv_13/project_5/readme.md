@@ -37,3 +37,31 @@
     - It will be inside "lib" by default..go back to scripts
     - Inside the scripts , there will be python.exe app
     - Choose this as your interpreter
+
+10. crispy forms installation
+    - <code>pip install crispy-bootstrap5</code>
+    - <code>INSTALLED_APPS =<br>
+    (
+        <br>
+                                ...
+        <br>
+                                "crispy_forms",
+        <br>
+                                "crispy_bootstrap5"
+        <br>
+                                ...
+        <br>
+    )
+        </code>
+    - <code>CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+        CRISPY_TEMPLATE_PACK = "bootstrap5"</code>
+    
+
+11. Create migrations
+    - <code>python manage.py makemigrations</code>
+
+12. Run migration
+    - <code>python manage.py migrate</code>
+
+13. Create superuser for authenficiation/admin panel
+    - <code>python manage.py createsuperuser</code>
