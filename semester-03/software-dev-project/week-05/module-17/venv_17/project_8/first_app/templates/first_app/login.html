@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!-- Message Show -->
+{% for m in messages %}
+<div class="alert {% if m.tags == 'error' %}
+        alert-danger
+      {% else %}
+        alert-{{ m.tags }}
+      {% endif %} alert-dismissible fade show" role="alert">
+  <strong>{{ m }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+<h1>Login</h1>
+<div>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <!-- {{ form|crispy }} -->
+    <!-- Non Feilds Error -->
+    {% if form.non_field_errors %}
+    {% for err in form.non_field_errors %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{ err }}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% for fm in form %}
+    {{ fm.label_tag }}
+    {{ fm }}
+    {{ fm.errors }}
+    {% endfor %}
+    <button class="btn btn-primary my-3" type="submit">Log In</button>
+    <p class="small text-muted">
+      Don't have an account? <a class="text-decoration-none" href="{% url 'signup' %}">Sign Up</a>
+    </p>
+  </form>
+</div>
+{% endblock %}

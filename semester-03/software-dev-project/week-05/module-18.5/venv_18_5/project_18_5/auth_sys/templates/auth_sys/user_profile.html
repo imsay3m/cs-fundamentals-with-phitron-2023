@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Welcome to the Profile,<span class="text-info">{{request.user|upper}}</span></h1>
+<a class="btn btn-warning" href="{% url "changepass" %}">Change Password</a>
+<a class="btn btn-warning" href="{% url "changepasswithoutold" %}">Change Password Without Old Password</a>
+{% endblock body %}

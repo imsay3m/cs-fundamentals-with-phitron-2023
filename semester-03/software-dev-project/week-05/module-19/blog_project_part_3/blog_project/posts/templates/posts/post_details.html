@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-8 mx-auto my-4">
+    <div class="mb-3">
+        <div class="card text-bg-dark">
+            <div class="card-body">
+                <div class="text-center">
+                    <img src=" {{post.image.url}}" class="card-img-top rounded-1 w-50 mb-2 px-auto text-center"
+                        alt="{{posts.image.url}}">
+                </div>
+                <h1 class="card-title">{{ post.title }}</h1>
+                <p class="card-text">{{ post.content}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">Author : <span class="text-info">{{ post.author.first_name }}
+                        {{ post.author.last_name }}</span>
+                </h6>
+                <p>
+                    Category :{% for cat in post.category.all %}
+                    <button class="btn btn-sm btn-secondary rounded-pill m-1">{{ cat }}</button>
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="card border-dark">
+            <div class="card-header">
+                <h3>Add Comment</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ comment_form|crispy }}
+                    <button class="btn btn-warning" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="alert alert-primary" role="alert">Total Comments: {{comments|length}}</div>
+        {% for comment in comments %}
+        <div class="card mb-1">
+            <div class="card-header">
+                <h5>{{comment.name}}</h5>
+                <p class="card-title text-info">{{comment.email}} <small class="blockquote-footer">Commented On: <cite
+                            class="text-primary" title="Source Title">{{comment.created_on}}</cite>
+                    </small></p>
+            </div>
+            <div class="card-body">
+                <h6 class="card-text">{{comment.body}}</h6>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
