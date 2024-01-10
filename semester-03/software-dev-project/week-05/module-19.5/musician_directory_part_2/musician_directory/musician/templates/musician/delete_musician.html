@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<h1>Are You Sure You Want to Delete Musician?</h1>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <a class="btn btn-primary text-decoration-none" href="{% url "home" %}">Cancel</a>
+    </form>
+</div>
+{% endblock %}

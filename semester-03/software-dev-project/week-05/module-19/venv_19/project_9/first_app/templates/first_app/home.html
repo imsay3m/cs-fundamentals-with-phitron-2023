@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project_9</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "set_cookies" %}">Set Cookies</a></li>
+            <li><a href="{% url "get_cookies" %}">Get Cookies</a></li>
+            <li><a href="{% url "del_cookies" %}">Delete Cookies</a></li>
+            <li><a href="{% url "set_session" %}">Set Session</a></li>
+            <li><a href="{% url "get_session" %}">Get Session</a></li>
+            <li><a href="{% url "del_session" %}">Delete Session</a></li>
+        </ul>
+    </nav>
+    <div>
+        {% block body %}
+        <h1>Home Page</h1>
+        {% endblock body %}
+    </div>
+</body>
+
+</html>

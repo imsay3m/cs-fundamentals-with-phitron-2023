@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<h1>Musician</h1>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-warning" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
