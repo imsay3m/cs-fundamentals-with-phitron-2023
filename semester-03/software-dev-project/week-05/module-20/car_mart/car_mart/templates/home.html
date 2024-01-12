@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div>
+    <div class="banner my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <h1 class="display-4 fw-bold">Full electric speed ahead</h1>
+                    <p>Audi recently underpinned its clear course toward electromobility with strong figures and
+                        important milestones. How the Four Rings are progressing on their path to successful
+                        electrification.</p>
+                    <p>Sporty, luxurious, or compact - at Audi you will find the right vehicle for
+                        every requirement. Discover and configure our series models now.</p>
+                    <button class="btn btn-outline-success">Read More</button>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-fluid" src="{% static "audi.jpg" %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-5">
+        <h1>Brands</h1>
+        <div class="list-group list-group-horizontal text-center">
+            {% for brand in brands %}
+            <a href="{% url "brand_wise_car" brand.slug %}"
+                class="list-group-item list-group-item-action">{{brand.name}}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="my-5">
+        <h2 class="my-2">
+            Car: <span class="badge text-bg-secondary">{{data|length}}</span>
+        </h2>
+        <div>
+            <div class="row row-cols-md-4">
+                {% for car in data %}
+                <div class="col-3 gy-2">
+                    <div class="card text-center">
+                        <img src="{{car.image.url}}" class="card-img-top" alt="{{car.model}}">
+                        <div class="card-body">
+                            <h2 class="card-title">{{car.model}}</h2>
+                            <p class="card-text fw-bold">${{car.price}}</p>
+                            <h6 class="card-subtitle mb-3 text-body-secondary">{{car.brand.name}}</h6>
+                            <a href="{% url "car_detail" car.id %}" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock body %}
