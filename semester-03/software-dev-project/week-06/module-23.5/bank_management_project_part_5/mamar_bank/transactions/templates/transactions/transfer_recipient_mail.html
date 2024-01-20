@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Received</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #333;
+        }
+
+        h5 {
+            color: #28a745;
+        }
+
+        h4 {
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Hello {{user.first_name}} {{user.last_name}}</h3>
+        <p>You have received a transaction of ${{amount}} from {{sender.first_name}} {{sender.last_name}}.</p>
+        <p>Your total balance is now ${{user.account.balance}}</p>
+        <h5>Thanks For Banking With Us</h5>
+        <h4>Mamar Bank</h4>
+    </div>
+</body>
+
+</html>

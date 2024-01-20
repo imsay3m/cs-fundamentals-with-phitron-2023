@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Request Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h5 {
+            color: #28a745;
+        }
+
+        h4 {
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Loan Request</h3>
+        <p>Dear {{user.first_name}} {{user.last_name}},</p>
+        <p>Your loan request for ${{ amount }} has been successfully completed. Please wait for admin approval.</p>
+
+        <h5>Thanks for banking with us!</h5>
+        <h4>Mamar Bank</h4>
+    </div>
+</body>
+
+</html>
