@@ -1,0 +1,5 @@
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+library_zenesis/library_zenesis/*.env
