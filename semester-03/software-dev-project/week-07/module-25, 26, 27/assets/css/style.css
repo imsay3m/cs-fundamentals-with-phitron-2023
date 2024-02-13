@@ -1,0 +1,618 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #ECECEC;
+  font-family: "DM Sans", sans-serif;
+}
+body header .nav-container {
+  margin-top: 45px;
+  margin-bottom: 67px;
+}
+body header .nav-container .menu-container .menu {
+  margin-right: 26px;
+}
+body header .nav-container .menu-container .auth {
+  margin-left: 14px;
+  font-weight: bold;
+  color: #007E85;
+}
+body header .nav-container .menu-container .btn-auth {
+  padding: 13px 40px;
+  background-color: #007E85;
+  color: #fff;
+  font-weight: bold;
+}
+body header .nav-container .menu-container .btn-auth:hover {
+  border: 1px solid #007E85;
+  color: #007E85;
+  background-color: #ECECEC;
+}
+body header .banner-container {
+  margin-bottom: 119px;
+  margin-top: 119px;
+}
+body header .banner-container .banner-text-greet {
+  margin-left: 55px;
+  font-size: 26px;
+  line-height: 39px;
+  margin-bottom: 20px;
+}
+body header .banner-container .banner-text-greet .user-name-text {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 53px;
+  color: #007E85;
+}
+body header .banner-container .banner-inner-container {
+  border-radius: 16px;
+  background: linear-gradient(66deg, rgba(123, 204, 194, 0.33) -5.25%, rgba(72, 190, 206, 0.34) 35.43%, #56BED4 66.69%);
+}
+body header .banner-container .banner-inner-container .banner-left {
+  margin-left: 55px;
+  margin-top: 79px;
+}
+body header .banner-container .banner-inner-container .banner-left .banner-title {
+  color: #007E85;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 98%;
+  margin-bottom: 22px;
+}
+body header .banner-container .banner-inner-container .banner-left .banner-desc {
+  min-width: 490px;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+}
+body header .banner-container .banner-inner-container .banner-right {
+  margin-top: -180px;
+  margin-right: 40px;
+}
+body main .services-container {
+  margin-bottom: 140px;
+}
+body main .services-container .services-provide {
+  color: #007E85;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 46px;
+  margin-bottom: 37px;
+}
+body main .services-container .services-provide-desc {
+  text-align: center;
+  max-width: 614px;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 36px;
+}
+body main .services-container #services-cards-spinner {
+  display: none;
+}
+body main .services-container .services #service-container .service .service-card {
+  width: 320px;
+  border-radius: 24px;
+}
+body main .services-container .services #service-container .service .service-card .card-body .card-title {
+  margin-top: 24px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+  color: #007E85;
+}
+body main .services-container .services #service-container .service .service-card .card-body .card-text {
+  margin-bottom: 8px;
+}
+body main .services-container .services #service-container .service .service-card .card-body div .card-details {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #007E85;
+}
+body main .doctors-container {
+  margin-bottom: 86px;
+}
+body main .doctors-container .col-3 .doc-dropdown .btn {
+  padding: 14px 32px;
+  width: 284px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #06ABA1;
+}
+body main .doctors-container .col-3 .doc-dropdown .doc-dropdown-menu {
+  width: 284px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background: #71D7CB;
+}
+body main .doctors-container .col-3 .doc-dropdown .doc-dropdown-menu #des-spinner {
+  display: none;
+}
+body main .doctors-container .col-3 .doc-dropdown .doc-dropdown-menu #spe-spinner {
+  display: none;
+}
+body main .doctors-container .col-3 .doc-dropdown .doc-dropdown-menu .dropdown-item {
+  color: #000;
+}
+body main .doctors-container .col-3 .doc-dropdown .doc-dropdown-menu .dropdown-item:hover {
+  color: #000;
+  background-color: #fff;
+}
+body main .doctors-container .col-9 .d-flex {
+  margin-bottom: 56px;
+}
+body main .doctors-container .col-9 .d-flex .search-input {
+  border-radius: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 59px;
+  color: #06ABA1;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+}
+body main .doctors-container .col-9 .d-flex .search-input::placeholder {
+  color: #06ABA1;
+}
+body main .doctors-container .col-9 .d-flex .search-button {
+  padding: 15px 30px;
+  border-radius: 40px;
+  border: 2px solid #06ABA1;
+  color: #06ABA1;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+}
+body main .doctors-container .col-9 .d-flex .search-button:hover {
+  color: #fff;
+  background-color: #06ABA1;
+}
+body main .doctors-container .col-9 #doc-cards-spinner {
+  display: none;
+}
+body main .doctors-container .col-9 #doc-cards-nodata {
+  display: none;
+}
+body main .doctors-container .col-9 .doc-cards .doc-card .card {
+  border-radius: 24px;
+}
+body main .doctors-container .col-9 .doc-cards .doc-card .card .card-body .card-title {
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 38px;
+  color: #007E85;
+  margin-bottom: 0;
+}
+body main .doctors-container .col-9 .doc-cards .doc-card .card .card-body .card-subtitle {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+body main .doctors-container .col-9 .doc-cards .doc-card .card .card-body .card-text {
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 19px;
+}
+body main .clients-review-container .reviews-provided {
+  color: #007E85;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 46px;
+  margin-bottom: 16px;
+}
+body main .clients-review-container .reviews-provided-desc {
+  text-align: center;
+  max-width: 614px;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+body main .clients-review-container #review-cards-spinner {
+  display: none;
+}
+body main .clients-review-container .review-cards {
+  margin-bottom: 251px;
+}
+body main .clients-review-container .review-cards .card-div .card {
+  border-radius: 24px;
+}
+body main .clients-review-container .review-cards .card-div .card .card-body {
+  padding: 50px 40px;
+}
+body main .clients-review-container .review-cards .card-div .card .card-body .d-flex {
+  margin-bottom: 40px;
+  column-gap: 18px;
+}
+body main .clients-review-container .review-cards .card-div .card .card-body .d-flex .card-top-right .card-title {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 18px;
+  color: #007E85;
+}
+body main .clients-review-container .review-cards .card-div .card .card-body .d-flex .card-top-right .card-rating {
+  fill: #06ABA1;
+  color: #06ABA1;
+}
+body main .clients-review-container .review-cards .card-div .card .card-body .card-subtitle {
+  margin-bottom: 23px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+}
+body main .clients-review-container .review-cards .card-div .card .card-body .card-text {
+  font-size: 18px;
+  line-height: 30px;
+}
+body main .doc-details-container .doc-details {
+  background-color: #fff;
+  border-radius: 24px;
+  margin-bottom: 51px;
+}
+body main .doc-details-container .doc-details .doc-detail .doctor-details-spinner {
+  display: none;
+}
+body main .doc-details-container .doc-details .doc-detail .d-flex .col-8 .card-body .card-title {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 38px;
+  color: #007E85;
+  margin-bottom: 23px;
+}
+body main .doc-details-container .doc-details .doc-detail .d-flex .col-8 .card-body .card-subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 14px !important;
+}
+body main .doc-details-container .doc-details .doc-detail .d-flex .col-8 .card-body .card-text {
+  color: #555;
+  font-size: 20px;
+  line-height: 19px;
+  width: 440px;
+}
+body main .doc-details-container .doc-details .doc-detail .d-flex .col-8 .card-body .card-price {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 38px;
+  color: #007E85;
+}
+body main .doc-details-container .doc-details .doc-detail .d-flex .col-8 .card-body .btn-appointment {
+  background: #06ABA1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 38px;
+  border-radius: 53px;
+  padding: 6px 22px;
+}
+body main .doc-details-container .doc-details h4 {
+  color: #333;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin: 65px;
+}
+body main .doc-details-container .doc-details .doc-details-review {
+  padding-bottom: 40px;
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card {
+  border-radius: 24px;
+  border: 1px solid #D4D2E3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card .card-body {
+  padding: 40px 30px;
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card .card-body .d-flex {
+  margin-bottom: 40px;
+  column-gap: 18px;
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card .card-body .d-flex .card-top-right .card-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #007E85;
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card .card-body .d-flex .card-top-right .card-rating {
+  fill: #06ABA1;
+  color: #06ABA1;
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card .card-body .card-subtitle {
+  margin-bottom: 23px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+}
+body main .doc-details-container .doc-details .doc-details-review .card-div .card .card-body .card-text {
+  font-size: 18px;
+  line-height: 30px;
+}
+body main .appointment-container .modal-dialog .modal-content {
+  border-radius: 28px;
+  background: #F2F2F2;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form {
+  margin: auto;
+  max-width: 413px;
+  text-align: center;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .form-check {
+  margin-bottom: 26px;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .form-check .form-check-input {
+  color: #06ABA1;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  border: 3px solid #06ABA1;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .form-check .form-check-input:checked {
+  background-color: #06ABA1;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .form-check .form-check-label {
+  color: #06ABA1;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .symptoms-input {
+  text-align: left;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .symptoms-input .form-label {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+  margin-bottom: 11px;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .symptoms-input .form-control {
+  text-align: center;
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .symptoms-input .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .time-field {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .time-field .form-label {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+  margin-bottom: 11px;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .time-field .form-select {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .symptoms-and-time .time-field option {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+}
+body main .appointment-container .modal-dialog .modal-content .modal-body .appointment-form .btn-appointment {
+  margin-top: 25px;
+  background: #06ABA1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 38px;
+  border-radius: 53px;
+  padding: 6px 22px;
+}
+body main .login-container .login-right form .login-title {
+  font-weight: bold;
+  font-size: 53px;
+  line-height: 19px;
+  padding-bottom: 52px;
+}
+body main .login-container .login-right form .username-container .form-label {
+  margin-left: 51px;
+  margin-bottom: 17px;
+  font-size: 35px;
+  line-height: 19px;
+}
+body main .login-container .login-right form .username-container .form-control {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 51px;
+  border-radius: 136px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-size: 24px;
+  line-height: 29px;
+}
+body main .login-container .login-right form .username-container .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  line-height: 19px;
+}
+body main .login-container .login-right form .password-container {
+  margin-top: 29px;
+  margin-bottom: 42px;
+}
+body main .login-container .login-right form .password-container .form-label {
+  margin-left: 51px;
+  margin-bottom: 17px;
+  font-size: 35px;
+  line-height: 19px;
+}
+body main .login-container .login-right form .password-container .form-control {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 51px;
+  border-radius: 136px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-size: 24px;
+  line-height: 29px;
+}
+body main .login-container .login-right form .password-container .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  line-height: 19px;
+}
+body main .login-container .login-right form .btn-auth {
+  background: #06ABA1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 38px;
+  border-radius: 53px;
+  padding: 6px 22px;
+}
+body main .login-container .login-right form .forgot-password {
+  text-align: center;
+  margin-top: 20px;
+  color: #000;
+  font-size: 20px;
+  line-height: 19px;
+}
+body main .signup-container .signup-right form .signup-title {
+  font-weight: bold;
+  font-size: 53px;
+  line-height: 19px;
+  padding-bottom: 32px;
+}
+body main .signup-container .signup-right form .field-container {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+body main .signup-container .signup-right form .field-container .form-label {
+  margin-left: 51px;
+  margin-bottom: 8px;
+  font-size: 26px;
+  line-height: 17px;
+}
+body main .signup-container .signup-right form .field-container .form-control {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 48px;
+  border-radius: 136px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-size: 20px;
+  line-height: 26px;
+}
+body main .signup-container .signup-right form .field-container .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 22px;
+  line-height: 19px;
+}
+body main .signup-container .signup-right form .btn-auth {
+  margin-top: 20px;
+  background: #06ABA1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+  border-radius: 53px;
+}
+body main .all-appointments-container .appointments-title {
+  font-weight: bold;
+  font-size: 53px;
+  line-height: 19px;
+  color: #007E85;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+body main .all-appointments-container table thead tr {
+  border: 0px solid #fff;
+}
+body main .all-appointments-container table thead tr .col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #D4E1ED;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+body main .all-appointments-container table .table-group-divider {
+  border: 2px solid #EED6D6;
+}
+body footer {
+  background: linear-gradient(66deg, #1CA8C7 -5.25%, #439FA5 46.76%, #4C7D8C 98.77%);
+}
+body footer .container .row {
+  padding-top: 137px;
+  padding-bottom: 106px;
+}
+body footer .container .row .left-column .left-col-copyright {
+  margin-bottom: 22px;
+  width: 288px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+body footer .container .row .left-column .left-col-text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-bottom: 13px;
+}
+body footer .container .row .right-column .col ul {
+  padding: 0;
+}
+body footer .container .row .right-column .col ul .right-col-text {
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-bottom: 42px;
+}
+body footer .container .row .right-column .col ul li {
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

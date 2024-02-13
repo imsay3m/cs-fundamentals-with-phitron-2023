@@ -1,0 +1,5 @@
+Include/
+Lib/
+Scripts/
+smart_care/smart_care/.env
+pyvenv.cfg
