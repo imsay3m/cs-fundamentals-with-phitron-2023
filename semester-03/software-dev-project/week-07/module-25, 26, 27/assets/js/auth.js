@@ -1,3 +1,9 @@
+const token = localStorage.getItem('token');
+if (token) {
+    // User is authenticated, redirect to userDetails page
+    window.location.href = "userDetails.html";
+}
+
 const handleSignup = (event) => {
     event.preventDefault()
     // console.log("hello")
@@ -18,7 +24,10 @@ const handleSignup = (event) => {
                     body: JSON.stringify(info),
                 })
                     .then((response) => response.json())
-                    .then((data) => console.log(data))
+                    .then((data) => {
+                        console.log(data)
+                        window.location.href = "login.html";
+                    })
 
             } catch (err) {
                 console.log(err.message)
@@ -36,32 +45,63 @@ const handleSignup = (event) => {
 
 
 const handleLogin = (event) => {
-    event.preventDefault()
-    const username = getValue("username-login")
-    const password = getValue("password-login")
-    console.log(username, password)
+    event.preventDefault();
+    const username = getValue("username-login");
+    const password = getValue("password-login");
+    console.log(username, password);
     if (username && password) {
-        try {
-            fetch("https://testing-8az5.onrender.com/patient/login/", {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify({ username, password })
+        fetch("https://testing-8az5.onrender.com/patient/login/", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ username, password })
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.token && data.user_id) {
+                    localStorage.setItem("token", data.token);
+                    localStorage.setItem("user_id", data.user_id);
+                    const user_id = data.user_id;
+                    // Now, make a POST request to create a new patient
+                    fetch(`https://testing-8az5.onrender.com/patient/list/?user_id=${user_id}`)
+                        .then(response => response.json())
+                        .then((data) => {
+                            if (data && data.length > 0 && data[0].id) {
+                                localStorage.setItem("patient_id", data[0].id);
+                                window.location.href = "index.html";
+                            } else {
+                                // If patient not found, create a new patient
+                                fetch("https://testing-8az5.onrender.com/patient/list/", {
+                                    method: "POST",
+                                    headers: { "content-type": "application/json" },
+                                    body: JSON.stringify({ image: null, mobile_no: "01", user: user_id })
+                                })
+                                    .then(createPatientResponse => createPatientResponse.json())
+                                    .then((createPatientData) => {
+                                        console.log("New Created Patient Data", createPatientData);
+                                        // Check if patient created successfully
+                                        if (createPatientData && createPatientData.id) {
+                                            localStorage.setItem("patient_id", createPatientData.id);
+                                            window.location.href = "index.html";
+                                        } else {
+                                            console.error("Failed to create patient.");
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error("Error while creating patient:", error);
+                                    });
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error while fetching patient list:", error);
+                        });
+                }
             })
-                .then((response) => response.json())
-                .then((data) => {
-                    if (data.token && data.user_id) {
-                        // console.log(data)
-                        localStorage.setItem("token", data.token)
-                        localStorage.setItem("user_id", data.user_id)
-                        window.location.href = "index.html";
-                    }
-                })
-        } catch (err) {
-            console.log(err.message)
-            console.log(err)
-        }
+            .catch(error => {
+                console.error("Error while logging in:", error);
+            });
     }
-}
+};
+
 
 
 const showPasswordAlert = (message) => {

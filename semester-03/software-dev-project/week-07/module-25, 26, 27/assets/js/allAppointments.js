@@ -1,4 +1,11 @@
 const loadAllAppointment = () => {
+    // Check if the user is authenticated
+    const token = localStorage.getItem('token');
+    if (!token) {
+        // User is not authenticated, redirect to login page or perform any other action
+        window.location.href = "login.html"; // Redirect to the login page
+        return;
+    }
     const patient_id = localStorage.getItem("patient_id")
     fetch(`https://testing-8az5.onrender.com/appointment/?patient_id=${patient_id}`)
         .then(response => response.json())
@@ -49,5 +56,6 @@ const loadAllAppointment = () => {
                 parent.appendChild(tr)
             });
         })
+        .catch(error => console.error('Error:', error));
 }
 loadAllAppointment()

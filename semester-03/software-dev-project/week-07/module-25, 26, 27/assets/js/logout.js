@@ -10,5 +10,7 @@ const handleLogout = () => {
             console.log(data)
             localStorage.removeItem('token')
             localStorage.removeItem('user_id')
+            localStorage.removeItem('patient_id')
+            window.location.href = "index.html"; // Redirect to the home page after successful logout
         })
 }

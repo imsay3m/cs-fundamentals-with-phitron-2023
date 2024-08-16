@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Your Account</title>
+</head>
+
+<body>
+    <table style="
+        padding: 30px;
+        max-width: 555px;
+        width: 100%;
+        font-family: 'Open Sans', Segoe, 'Segoe UI', 'DejaVu Sans',
+          'Trebuchet MS', Verdana, sans-serif;
+        background: #fff;
+        font-size: 13px;
+        color: #323232;
+      " cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+        <tbody>
+            <tr>
+                <td align="left">
+                    <h1 style="text-align: center">
+                        <span style="font-size: 15px">
+                            <strong>Verify Your Account</strong>
+                        </span>
+                    </h1>
+
+                    <p>
+                        Your request to create account was submitted. If you did not
+                        make this request, simply ignore this email. If you did make this
+                        request just click the button below:
+                    </p>
+
+                    <table style="
+                max-width: 555px;
+                width: 100%;
+                font-family: 'Open Sans', arial, sans-serif;
+                font-size: 13px;
+                color: #323232;
+              " cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+                        <tbody>
+                            <tr>
+                                <td height="10">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <a href="{{ confirm_link }}" style="
+                        color: #fff;
+                        background-color: hsla(199, 69%, 84%, 1);
+                        width: 320px;
+                        font-size: 16px;
+                        border-radius: 3px;
+                        line-height: 44px;
+                        height: 44px;
+                        font-family: 'Open Sans', Arial, helvetica, sans-serif;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                      " target="_blank" data-saferedirecturl="{{ confirm_link }}">
+                                        <span style="color: #000000">
+                                            <strong>Activate Account</strong>
+                                        </span>
+                                    </a>
+                                    <br />
+                                    <p align="left">&nbsp;</p>
+                                    If the above link doesn't work, try copying and pasting
+                                    the link below into your browser. If you continue to
+                                    experience problems, please contact us.
+                                    <br />
+                                    {{ confirm_link }}
+                                    <br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

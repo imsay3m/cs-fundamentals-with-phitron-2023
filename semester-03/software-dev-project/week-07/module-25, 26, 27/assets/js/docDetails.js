@@ -1,4 +1,11 @@
 const getParams = () => {
+    // Check if the user is authenticated
+    const token = localStorage.getItem('token');
+    if (!token) {
+        // User is not authenticated, redirect to login page or perform any other action
+        window.location.href = "login.html"; // Redirect to the login page
+        return;
+    }
     document.getElementById("doctor-details-spinner").style.display = "block"
     const param = new URLSearchParams(window.location.search).get("doctorId")
     // console.log(param)
@@ -199,6 +206,7 @@ const handleAppointment = () => {
 
 const loadPatient = () => {
     const user_id = localStorage.getItem("user_id")
+    
     fetch(`https://testing-8az5.onrender.com/patient/list/?user_id=${user_id}`)
         .then(response => response.json())
         .then((data) => {

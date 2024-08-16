@@ -1,3 +1,28 @@
+const isAuthenticated = () => {
+    const token = localStorage.getItem("token");
+    return token !== null;
+};
+
+// Function to toggle visibility of profile and logout button based on authentication
+const toggleAuthElements = () => {
+    const profileDropdown = document.querySelector('.dropdown');
+    const loginButton = document.getElementById('login-button');
+    const registerButton = document.getElementById('register-button');
+    if (isAuthenticated()) {
+        profileDropdown.style.display = 'block'; // Show profile dropdown
+        loginButton.style.display = "none";  // Hide login button
+        registerButton.style.display = "none"; // Hide registration button
+    } else {
+        profileDropdown.style.display = 'none'; // Hide profile dropdown
+        loginButton.style.display = "block";   // Show login button
+        registerButton.style.display = "block";  // Show registration button
+    }
+};
+
+// Call the function to toggle visibility on page load
+window.onload = toggleAuthElements;
+
+
 //loading services data
 const loadServices = async () => {
     // document.getElementById("service-container").innerHTML = "";

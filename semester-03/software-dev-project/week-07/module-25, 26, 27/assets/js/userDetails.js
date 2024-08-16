@@ -1,4 +1,11 @@
 const loadUserDetails = () => {
+    // Check if the user is authenticated
+    const token = localStorage.getItem('token');
+    if (!token) {
+        // User is not authenticated, redirect to login page or perform any other action
+        window.location.href = "login.html"; // Redirect to the login page
+        return;
+    }
     const user_id = localStorage.getItem("user_id")
     fetch(`https://testing-8az5.onrender.com/users/${user_id}`)
         .then((response) => response.json())
